@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Aggrego/IntegrationClient.git",
-                "reference": "b981e1a8559e5c8920206918743d6cde95b82a0f"
+                "reference": "a94e15762f314c9301e6c3b34684fec6cb7d7865"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Aggrego/IntegrationClient/zipball/b981e1a8559e5c8920206918743d6cde95b82a0f",
-                "reference": "b981e1a8559e5c8920206918743d6cde95b82a0f",
+                "url": "https://api.github.com/repos/Aggrego/IntegrationClient/zipball/a94e15762f314c9301e6c3b34684fec6cb7d7865",
+                "reference": "a94e15762f314c9301e6c3b34684fec6cb7d7865",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +42,7 @@
                     "name": "Tomasz Kunicki"
                 }
             ],
-            "time": "2018-07-29T12:17:48+00:00"
+            "time": "2018-08-31T15:50:53+00:00"
         },
         {
             "name": "beberlei/assert",

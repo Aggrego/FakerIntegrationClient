@@ -3,6 +3,8 @@
 namespace spec\Aggrego\FakerIntegrationClient\IntegrationClient\Api;
 
 use Aggrego\FakerIntegrationClient\IntegrationClient\Api\Client;
+use Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy\Factory;
+use Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy\Strategies\Digit;
 use Aggrego\IntegrationClient\Api\Client as IntegrationClient;
 use Aggrego\IntegrationClient\Api\Server;
 use Aggrego\IntegrationClient\Request;
@@ -12,12 +14,14 @@ use Aggrego\IntegrationClient\ValueObject\Profile;
 use Aggrego\IntegrationClient\ValueObject\Uuid;
 use Aggrego\IntegrationClient\ValueObject\Version;
 use PhpSpec\ObjectBehavior;
+use Prophecy\Argument;
 
 class ClientSpec extends ObjectBehavior
 {
-    function let(Server $server)
+    function let(Server $server, Factory $factory)
     {
-        $this->beConstructedWith($server);
+        $factory->factory(Argument::type(Profile::class))->willReturn(new Digit());
+        $this->beConstructedWith($server, $factory);
     }
 
     function it_is_initializable()

@@ -1,7 +1,7 @@
 Feature: Generate random Digit
 
   Scenario:
-    When I request client for "faker.digit" profile empty key
+    When I request client for "faker.randomDigit" profile empty key
     Then should response be digit
 
   Scenario:

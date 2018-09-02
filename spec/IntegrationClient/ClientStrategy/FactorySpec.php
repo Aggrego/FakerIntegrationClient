@@ -17,16 +17,23 @@ class FactorySpec extends ObjectBehavior
         $this->shouldHaveType(Factory::class);
     }
 
-    function it_should_have_lower_version_than_one(Profile $profile)
+    function it_should_throw_exception_when_unknown_name(Profile $profile)
     {
-        $profile->getName()->willReturn(new Name('test'));
+        $profile->getName()->willReturn(new Name('faker.test'));
         $profile->getVersion()->willReturn(new Version('1.1'));
+        $this->shouldThrow(StrategyNotFoundException::class)->during('factory', [$profile]);
+    }
+
+    function it_should_throw_exception_when_higher_version_than_one(Profile $profile)
+    {
+        $profile->getName()->willReturn(new Name('faker.randomDigit'));
+        $profile->getVersion()->willReturn(new Version('2.1'));
         $this->shouldThrow(StrategyNotFoundException::class)->during('factory', [$profile]);
     }
 
     function it_should_return_strategy_for_correct_profile()
     {
-        $profile = new Profile(new Name('faker.digit'), new Version('1.0'));
+        $profile = new Profile(new Name('faker.randomDigit'), new Version('1.0'));
         $this->factory($profile)->shouldReturnAnInstanceOf(Strategy::class);
     }
 }

@@ -5,9 +5,11 @@ namespace spec\Aggrego\FakerIntegrationClient\IntegrationClient\Api;
 use Aggrego\FakerIntegrationClient\IntegrationClient\Api\Client;
 use Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy\Factory;
 use Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy\Strategies\Digit;
+use Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy\Strategy;
 use Aggrego\IntegrationClient\Api\Client as IntegrationClient;
 use Aggrego\IntegrationClient\Api\Server;
 use Aggrego\IntegrationClient\Request;
+use Aggrego\IntegrationClient\ValueObject\Data;
 use Aggrego\IntegrationClient\ValueObject\Key;
 use Aggrego\IntegrationClient\ValueObject\Name;
 use Aggrego\IntegrationClient\ValueObject\Profile;
@@ -18,9 +20,10 @@ use Prophecy\Argument;
 
 class ClientSpec extends ObjectBehavior
 {
-    function let(Server $server, Factory $factory)
+    function let(Server $server, Factory $factory, Strategy $strategy)
     {
-        $factory->factory(Argument::type(Profile::class))->willReturn(new Digit());
+        $strategy->process(Argument::type(Key::class))->willReturn(new Data('test'));
+        $factory->factory(Argument::type(Profile::class))->willReturn($strategy);
         $this->beConstructedWith($server, $factory);
     }
 

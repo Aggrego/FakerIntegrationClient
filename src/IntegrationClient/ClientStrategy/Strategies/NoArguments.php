@@ -46,6 +46,38 @@ class NoArguments extends Strategy
         'safari',
         'opera',
         'internetExplorer',
+        //Faker\Provider\Payment
+        'creditCardType',
+        'creditCardNumber',
+        'creditCardExpirationDateString',
+        'creditCardDetails',
+        'swiftBicNumber',
+        //Faker\Provider\Color
+        'hexcolor',
+        'rgbcolor',
+        'rgbColorAsArray',
+        'rgbCssColor',
+        'safeColorName',
+        'colorName',
+        //Faker\Provider\File
+        'fileExtension',
+        'mimeType',
+        //Faker\Provider\Uuid
+        'uuid',
+        //Faker\Provider\Barcode
+        'ean13',
+        'ean8',
+        'isbn13',
+        'isbn10',
+        //Faker\Provider\Miscellaneous
+        'boolean',
+        'md5',
+        'sha1',
+        'sha256',
+        'locale',
+        'countryCode',
+        'languageCode',
+        'currencyCode',
     ];
 
     /** @var string  */

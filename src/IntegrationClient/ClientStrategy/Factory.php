@@ -25,12 +25,11 @@ class Factory
         $profileName = $profile->getName()->getValue();
         Assertion::regex($profileName, '~^faker\.([a-zA-Z0-9]+)$~');
 
-        if (Comparator::greaterThan('1.0.0.0', $versionNumber)) {
+        if (Comparator::greaterThan($versionNumber, '1.0.0.0')) {
             throw new StrategyNotFoundException(
                 sprintf('For given profile %s:%s strategy not found', $profileName, $versionNumber)
             );
         }
-
 
         try {
             return NoArguments::create($profile);

@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy\Strategies;
+namespace Aggrego\FakerIntegrationClient\ResponseStrategy\Strategies;
 
-use Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy\Strategy as InterfaceStrategy;
+use Aggrego\FakerIntegrationClient\ResponseStrategy\Strategy as InterfaceStrategy;
 use Aggrego\IntegrationClient\ValueObject\Data;
 use Faker\Factory as FakerFactory;
 use Faker\Generator;

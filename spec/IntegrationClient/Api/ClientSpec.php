@@ -3,18 +3,15 @@
 namespace spec\Aggrego\FakerIntegrationClient\IntegrationClient\Api;
 
 use Aggrego\FakerIntegrationClient\IntegrationClient\Api\Client;
-use Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy\Factory;
-use Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy\Strategies\Digit;
-use Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy\Strategy;
+use Aggrego\FakerIntegrationClient\ResponseStrategy\Factory;
+use Aggrego\FakerIntegrationClient\ResponseStrategy\Strategy;
 use Aggrego\IntegrationClient\Api\Client as IntegrationClient;
 use Aggrego\IntegrationClient\Api\Server;
 use Aggrego\IntegrationClient\Request;
 use Aggrego\IntegrationClient\ValueObject\Data;
 use Aggrego\IntegrationClient\ValueObject\Key;
-use Aggrego\IntegrationClient\ValueObject\Name;
 use Aggrego\IntegrationClient\ValueObject\Profile;
 use Aggrego\IntegrationClient\ValueObject\Uuid;
-use Aggrego\IntegrationClient\ValueObject\Version;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -38,7 +35,7 @@ class ClientSpec extends ObjectBehavior
         $request = new Request(
             new Uuid('1'),
             new Key([]),
-            new Profile(new Name('faker.digit'), new Version('1.0'))
+            Profile::create('faker.randomDigit', '1.0')
         );
         $this->handle($request)->shouldBeNull();
     }

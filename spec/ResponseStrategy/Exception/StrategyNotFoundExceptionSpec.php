@@ -1,9 +1,9 @@
 <?php
 
-namespace spec\Aggrego\FakerIntegrationClient\IntegrationClient\Exception;
+namespace spec\Aggrego\FakerIntegrationClient\ResponseStrategy\Exception;
 
-use Aggrego\FakerIntegrationClient\IntegrationClient\Exception\RuntimeException;
-use Aggrego\FakerIntegrationClient\IntegrationClient\Exception\StrategyNotFoundException;
+use Aggrego\FakerIntegrationClient\Exception\RuntimeException;
+use Aggrego\FakerIntegrationClient\ResponseStrategy\Exception\StrategyNotFoundException;
 use PhpSpec\ObjectBehavior;
 
 class StrategyNotFoundExceptionSpec extends ObjectBehavior

@@ -2,8 +2,8 @@
 
 namespace Aggrego\FakerIntegrationClient\IntegrationClient\Api;
 
-use Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy\Factory;
-use Aggrego\FakerIntegrationClient\IntegrationClient\Exception\StrategyNotFoundException;
+use Aggrego\FakerIntegrationClient\ResponseStrategy\Factory;
+use Aggrego\FakerIntegrationClient\ResponseStrategy\Exception\StrategyNotFoundException;
 use Aggrego\IntegrationClient\Api\Client as IntegrationClient;
 use Aggrego\IntegrationClient\Api\Server;
 use Aggrego\IntegrationClient\Request;

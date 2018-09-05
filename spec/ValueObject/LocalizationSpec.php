@@ -4,7 +4,6 @@ namespace spec\Aggrego\FakerIntegrationClient\ValueObject;
 
 use Aggrego\FakerIntegrationClient\ValueObject\Localization;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class LocalizationSpec extends ObjectBehavior
 {

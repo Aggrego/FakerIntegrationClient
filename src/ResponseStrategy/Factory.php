@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy;
+namespace Aggrego\FakerIntegrationClient\ResponseStrategy;
 
-use Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy\Strategies\NoArguments;
-use Aggrego\FakerIntegrationClient\IntegrationClient\Exception\StrategyNotFoundException;
+use Aggrego\FakerIntegrationClient\ResponseStrategy\Strategies\NoArguments;
+use Aggrego\FakerIntegrationClient\ResponseStrategy\Exception\StrategyNotFoundException;
 use Aggrego\IntegrationClient\ValueObject\Profile;
 use Assert\Assertion;
 use Composer\Semver\Comparator;

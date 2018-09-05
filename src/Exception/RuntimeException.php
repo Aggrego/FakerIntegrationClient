@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Aggrego\FakerIntegrationClient\IntegrationClient\Exception;
+namespace Aggrego\FakerIntegrationClient\Exception;
 
 use RuntimeException as BaseRuntimeException;
 

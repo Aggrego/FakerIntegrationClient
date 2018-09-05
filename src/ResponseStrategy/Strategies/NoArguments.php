@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy\Strategies;
+namespace Aggrego\FakerIntegrationClient\ResponseStrategy\Strategies;
 
-use Aggrego\FakerIntegrationClient\IntegrationClient\Exception\StrategyNotFoundException;
+use Aggrego\FakerIntegrationClient\ResponseStrategy\Exception\StrategyNotFoundException;
 use Aggrego\IntegrationClient\ValueObject\Data;
 use Aggrego\IntegrationClient\ValueObject\Key;
 use Aggrego\IntegrationClient\ValueObject\Name;

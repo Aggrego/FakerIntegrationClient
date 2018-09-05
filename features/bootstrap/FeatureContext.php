@@ -1,13 +1,11 @@
 <?php
 
 use Aggrego\FakerIntegrationClient\IntegrationClient\Api\Client;
-use Aggrego\FakerIntegrationClient\IntegrationClient\ClientStrategy\Factory;
+use Aggrego\FakerIntegrationClient\ResponseStrategy\Factory;
 use Aggrego\IntegrationClient\Request;
 use Aggrego\IntegrationClient\ValueObject\Key;
-use Aggrego\IntegrationClient\ValueObject\Name;
 use Aggrego\IntegrationClient\ValueObject\Profile;
 use Aggrego\IntegrationClient\ValueObject\Uuid;
-use Aggrego\IntegrationClient\ValueObject\Version;
 use Assert\Assertion;
 use Behat\Behat\Context\Context;
 use Behat\IntegrationClient\Api\Server;
@@ -32,10 +30,7 @@ class FeatureContext implements Context
             new Request(
                 new Uuid('test'),
                 new Key([]),
-                new Profile(
-                    new Name($profileName),
-                    new Version('1.0')
-                )
+                Profile::create($profileName, '1.0')
             )
         );
     }

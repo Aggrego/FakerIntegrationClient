@@ -1,8 +1,8 @@
 <?php
 
-namespace spec\Aggrego\FakerIntegrationClient\IntegrationClient\Exception;
+namespace spec\Aggrego\FakerIntegrationClient\Exception;
 
-use Aggrego\FakerIntegrationClient\IntegrationClient\Exception\RuntimeException;
+use Aggrego\FakerIntegrationClient\Exception\RuntimeException;
 use PhpSpec\ObjectBehavior;
 use RuntimeException as BaseRuntimeException;
 

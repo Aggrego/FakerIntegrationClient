@@ -19,7 +19,7 @@
   },
   "require-dev": {
     "phpspec/phpspec": "^5.0",
-    "behat/behat": "3.4.*"
+    "behat/behat": "^3.4"
   },
   "autoload": {
     "psr-4": {"Aggrego\\FakerIntegrationClient\\": "src/"}

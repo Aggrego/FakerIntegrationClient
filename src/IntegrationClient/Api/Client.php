@@ -40,6 +40,7 @@ class Client implements IntegrationClient
         $this->server->push(
             new Response(
                 $request->getUuid(),
+                $request->getKey(),
                 $request->getProfile(),
                 $strategy->process($request->getKey())
             )

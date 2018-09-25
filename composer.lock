@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Aggrego/IntegrationClient.git",
-                "reference": "47c2eafad3980af7c7add8a6dd3935082c114c71"
+                "reference": "4a827c02c9d3d9a11041f452b0f682a449494108"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Aggrego/IntegrationClient/zipball/47c2eafad3980af7c7add8a6dd3935082c114c71",
-                "reference": "47c2eafad3980af7c7add8a6dd3935082c114c71",
+                "url": "https://api.github.com/repos/Aggrego/IntegrationClient/zipball/4a827c02c9d3d9a11041f452b0f682a449494108",
+                "reference": "4a827c02c9d3d9a11041f452b0f682a449494108",
                 "shasum": ""
             },
             "require": {
@@ -25,9 +25,10 @@
                 "php": ">=7.1"
             },
             "require-dev": {
-                "phpspec/phpspec": "^5.0"
+                "phpspec/phpspec": "^5.0",
+                "wikimedia/composer-merge-plugin": "1.4.*"
             },
-            "type": "domain",
+            "type": "library",
             "autoload": {
                 "psr-4": {
                     "Aggrego\\IntegrationClient\\": "src/"
@@ -42,7 +43,7 @@
                     "name": "Tomasz Kunicki"
                 }
             ],
-            "time": "2018-09-14T15:40:56+00:00"
+            "time": "2018-09-24T18:56:42+00:00"
         },
         {
             "name": "beberlei/assert",
